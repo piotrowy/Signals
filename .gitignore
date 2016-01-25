@@ -1,0 +1,10 @@
+.idea/*
+.idea
+.idea/**
+__pycache__
+__pycache__/*
+server/server
+server/server.o
+client/__pycache__
+client/__pycache__/*
+client/.idea

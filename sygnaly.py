@@ -2,10 +2,11 @@ import wave
 import numpy
 import struct
 import functools
+import sys
 
 
-def main(argv):
-    signal = wave.open(argv)
+def main():
+    signal = wave.open(sys.argv)
     max_fouriers = []
     channels, samp_width, frame_rate, nframes, comp_type, comp_name = signal.getparams()
     time_frame_size = int(frame_rate/5)

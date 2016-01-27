@@ -6,7 +6,7 @@ import sys
 
 
 def main():
-    signal = wave.open(sys.argv)
+    signal = wave.open(sys.argv[1], "r")
     max_fouriers = []
     channels, samp_width, frame_rate, nframes, comp_type, comp_name = signal.getparams()
     time_frame_size = int(frame_rate/5)

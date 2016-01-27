@@ -21,10 +21,12 @@ def main():
             max_fouriers.append(numpy.asarray([abs(fourier[i]) for i in range(1, 56, 1)]).argmax(axis=0)*frame_rate/time_frame_size)
     max_fouriers.sort()
 
-    if len(max_fouriers) > 0 and max_fouriers[int(len(max_fouriers)/2)] < 165:
-        print('M')
-    elif max_fouriers[int(len(max_fouriers)/2)] >= 165:
-        print('K')
+    if len(max_fouriers) > 0:
+        if max_fouriers[int(len(max_fouriers)/2)] < 165:
+            print('M')
+        elif max_fouriers[int(len(max_fouriers)/2)] >= 165:
+            print('K')
+        
 
 if __name__ == '__main__':
     main()
